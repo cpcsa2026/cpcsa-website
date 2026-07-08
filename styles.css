@@ -304,3 +304,95 @@ h3 { font-size: 1.35rem; margin-bottom: 10px; }
 @media (max-width: 620px) {
   .site-logo { width: 165px; max-height: 52px; }
 }
+
+/* Quote page */
+.quote-hero { padding: 70px 0; }
+.quote-hero-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 38px;
+  align-items: center;
+}
+.quote-logo-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.quote-logo-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.quote-section { background: var(--bg); }
+.quote-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 28px;
+  align-items: start;
+}
+.quote-form, .sidebar-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  box-shadow: 0 14px 34px rgba(16, 32, 43, 0.07);
+}
+.quote-form { padding: 34px; }
+.form-section-heading { margin-bottom: 26px; }
+.form-section-heading p:last-child { color: var(--muted); }
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.quote-form label, fieldset {
+  display: block;
+  margin-bottom: 18px;
+  font-weight: 800;
+}
+.quote-form input, .quote-form select, .quote-form textarea {
+  width: 100%;
+  margin-top: 8px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 14px 15px;
+  font: inherit;
+  color: var(--ink);
+  background: #fbfdfe;
+}
+.quote-form textarea { resize: vertical; }
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 20px;
+}
+legend { padding: 0 8px; font-weight: 900; }
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 18px;
+  margin-top: 8px;
+}
+.checkbox-grid label {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+.checkbox-grid input { width: auto; margin-top: 5px; }
+.form-submit { border: 0; cursor: pointer; margin-top: 8px; }
+.quote-sidebar { display: grid; gap: 18px; }
+.sidebar-card { padding: 26px; }
+.sidebar-card p { color: var(--muted); }
+.accent-card { background: linear-gradient(135deg, rgba(57,183,232,0.12), rgba(139,214,63,0.14)); }
+.number-list { padding-left: 22px; color: var(--muted); font-weight: 700; }
+.number-list li { margin-bottom: 10px; }
+@media (max-width: 1000px) {
+  .quote-hero-grid, .quote-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .form-grid, .checkbox-grid { grid-template-columns: 1fr; }
+  .quote-form { padding: 24px; }
+}
