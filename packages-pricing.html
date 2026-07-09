@@ -6,122 +6,126 @@
 <title>Packages & Pricing | Complete Property Care SA</title>
 <link rel="icon" href="images/logo.png" />
 <style>
-:root{--blue:#0b6fb8;--blue-dark:#084d80;--green:#78c943;--dark:#17212b;--muted:#667085;--light:#f5f8fb;--white:#fff;--border:#dbe4ee}
+:root{
+  --blue:#0b6fb8;--blue-dark:#073f69;--green:#78c943;--green-dark:#3d9d2c;
+  --ink:#17212b;--muted:#64748b;--white:#fff;--border:#d7e4ef;
+}
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--light);color:var(--dark);line-height:1.55}
-header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
-.nav{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;gap:20px}
-.logo{height:62px;max-width:280px;object-fit:contain}
-nav a{text-decoration:none;margin-left:18px;font-weight:700;color:var(--dark)}
+body{
+  margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.55;
+  background:
+    radial-gradient(circle at 8% 12%,rgba(120,201,67,.28),transparent 26%),
+    radial-gradient(circle at 92% 5%,rgba(11,111,184,.25),transparent 30%),
+    linear-gradient(135deg,#e8f8ff 0%,#f5ffe9 48%,#eaf8ff 100%);
+  background-attachment:fixed;
+}
+header{background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
+.nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;gap:20px}
+.logo{height:64px;max-width:285px;object-fit:contain}
+nav a{text-decoration:none;margin-left:18px;font-weight:800;color:var(--ink)}
 nav a.active,nav a:hover{color:var(--blue)}
-.hero{background:linear-gradient(135deg,var(--blue-dark),var(--blue));color:white;padding:70px 20px;text-align:center}
-.hero h1{font-size:44px;margin:0 0 14px}
-.hero p{font-size:19px;max-width:820px;margin:0 auto 24px}
-.btn{display:inline-block;background:var(--green);color:white;text-decoration:none;padding:14px 26px;border-radius:8px;font-weight:800}
-.container{max-width:1180px;margin:auto;padding:42px 20px}
-.section-title{margin:0 0 18px;font-size:31px;color:var(--blue-dark)}
-.note{background:#eaf6ff;border-left:5px solid var(--blue);padding:18px 20px;border-radius:8px;margin:18px 0 34px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:22px}
-.card{background:white;border:1px solid var(--border);border-radius:14px;padding:24px;box-shadow:0 6px 18px rgba(16,24,40,.06)}
-.card h3{margin-top:0;color:var(--blue-dark)}
-.price{font-size:32px;font-weight:900;color:var(--green);margin:8px 0}
-ul{padding-left:20px}
-li{margin:7px 0}
-table{width:100%;border-collapse:collapse;background:white;border-radius:12px;overflow:hidden;margin:16px 0 34px;box-shadow:0 6px 18px rgba(16,24,40,.05)}
-th,td{padding:14px 16px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+.hero{position:relative;overflow:hidden;text-align:center;color:white;padding:86px 20px 98px;background:linear-gradient(135deg,var(--blue-dark),var(--blue))}
+.hero h1{font-size:48px;margin:0 0 14px}
+.hero p{font-size:20px;max-width:850px;margin:0 auto 26px}
+.btn{display:inline-block;background:var(--green);color:white;text-decoration:none;padding:15px 28px;border-radius:10px;font-weight:900;box-shadow:0 10px 20px rgba(0,0,0,.16)}
+.container{max-width:1200px;margin:auto;padding:44px 20px}
+h2{font-size:33px;color:var(--blue-dark);margin:0 0 18px}
+h3{color:var(--blue-dark)}
+.note{background:#eef9ff;border-left:6px solid var(--blue);padding:18px 20px;border-radius:12px;margin:14px 0 30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px}
+.card{background:rgba(255,255,255,.94);border:1px solid var(--border);border-radius:18px;padding:26px;box-shadow:0 12px 28px rgba(16,24,40,.08);transition:.2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(16,24,40,.12)}
+.price{font-size:36px;color:var(--green-dark);font-weight:900;margin:8px 0 12px}
+.badge{display:inline-block;background:#ecf9e7;color:#2f7d1f;border:1px solid #ccefc0;padding:7px 12px;border-radius:999px;font-weight:900;font-size:13px}
+ul{padding-left:21px}li{margin:7px 0}
+table{width:100%;border-collapse:collapse;background:white;border-radius:14px;overflow:hidden;margin:16px 0 36px;box-shadow:0 10px 24px rgba(16,24,40,.07)}
+th,td{padding:15px 16px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
 th{background:var(--blue-dark);color:white}
 tr:last-child td{border-bottom:none}
-td:last-child,th:last-child{text-align:right;font-weight:800}
-.small{color:var(--muted);font-size:14px}
-.split{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
-.cta{background:var(--blue-dark);color:white;text-align:center;border-radius:16px;padding:42px 20px;margin-top:40px}
-.cta h2{margin-top:0}
-.badge{display:inline-block;background:#eef8e9;color:#2f7d1f;border:1px solid #ccefc0;padding:6px 10px;border-radius:999px;font-weight:800;font-size:13px;margin-bottom:8px}
-.footer{background:#101820;color:white;text-align:center;padding:28px 20px;margin-top:36px}
-@media(max-width:820px){.nav{flex-direction:column}nav a{display:inline-block;margin:8px}.hero h1{font-size:34px}.split{grid-template-columns:1fr}td:last-child,th:last-child{text-align:left}}
+td:last-child,th:last-child{text-align:right;font-weight:900}
+.section{margin:54px 0}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:24px}
+.value-box{background:linear-gradient(135deg,#ffffff,#f1ffe9);border:1px solid #ccefc0;border-radius:18px;padding:26px}
+.small{font-size:14px;color:var(--muted)}
+.cta{background:linear-gradient(135deg,var(--blue-dark),var(--blue));color:white;text-align:center;border-radius:20px;padding:46px 24px;margin:52px 0 0}
+.cta h2{color:white}
+.lawn-strip{position:relative;height:78px;overflow:hidden;background:linear-gradient(to top,#4eaf2e,#9be65c);margin-top:40px}
+.lawn-strip:before,.lawn-strip:after{content:"";position:absolute;left:-12%;right:-12%;bottom:0;height:100px;background:repeating-linear-gradient(82deg,transparent 0 9px,rgba(28,116,25,.96) 10px 12px,transparent 13px 20px),repeating-linear-gradient(99deg,transparent 0 11px,rgba(87,181,44,.92) 12px 15px,transparent 16px 24px);transform-origin:bottom;animation:grassWave 3.4s ease-in-out infinite alternate}
+.lawn-strip:after{opacity:.55;animation-duration:4.8s;animation-direction:alternate-reverse}
+@keyframes grassWave{0%{transform:skewX(-2deg) translateX(-10px)}100%{transform:skewX(2deg) translateX(10px)}}
+footer{background:#101820;color:white;text-align:center;padding:30px 20px}
+@media(max-width:850px){.nav{flex-direction:column}nav a{display:inline-block;margin:7px}.hero h1{font-size:36px}.split{grid-template-columns:1fr}td:last-child,th:last-child{text-align:left}}
 </style>
 </head>
 <body>
-<header>
-  <div class="nav">
-    <a href="index.html"><img class="logo" src="images/logo.png" alt="Complete Property Care SA logo"></a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a class="active" href="packages-pricing.html">Packages & Pricing</a>
-      <a href="quote.html">Get a Quote</a>
-    </nav>
-  </div>
-</header>
+<header><div class="nav"><a href="index.html"><img class="logo" src="images/logo.png" alt="Complete Property Care SA logo"></a><nav><a href="index.html">Home</a><a href="services.html">Services</a><a class="active" href="packages-pricing.html">Packages & Pricing</a><a href="quote.html">Get a Quote</a></nav></div></header>
 
 <section class="hero">
-  <h1>Packages & Pricing</h1>
-  <p>Clear starting prices for cleaning, lawn care, garden maintenance and complete property care packages across Adelaide.</p>
-  <a class="btn" href="quote.html">Request a Free Quote</a>
+<h1>Packages & Pricing</h1>
+<p>Transparent starting prices for cleaning, lawn care, garden maintenance and complete property care across Adelaide.</p>
+<a class="btn" href="quote.html">Request a Free Quote</a>
 </section>
 
 <main class="container">
-<section>
-<h2 class="section-title">Membership Packages</h2>
-<p class="note"><strong>Best value for regular clients:</strong> packages combine cleaning, lawn care and ongoing property maintenance into one predictable service plan. Final pricing may vary depending on property size, access, lawn condition, travel area and service requirements.</p>
+
+<section class="section">
+<h2>Membership Packages</h2>
+<p class="note"><strong>Best value for regular clients:</strong> these packages match the locked CPCSA package prices and combine regular cleaning, lawn care and property maintenance into predictable plans.</p>
 <div class="grid">
-<div class="card"><span class="badge">Weekly plan</span><h3>Home Essentials</h3><div class="price">$189 / week</div><ul><li>Weekly home cleaning up to 2 hours</li><li><strong>Weekly lawn mowing</strong></li><li>Basic edging each visit</li><li>Mopping included</li><li>Priority scheduling</li><li>10% discount on additional services</li></ul></div>
-<div class="card"><span class="badge">Most popular</span><h3>Home Balance</h3><div class="price">$249 / fortnight</div><ul><li>Weekly home cleaning up to 2 hours</li><li><strong>Fortnightly lawn mowing</strong></li><li>Monthly garden maintenance</li><li>Lawn health inspections</li><li>Weed monitoring</li><li>Mopping included</li><li>Priority scheduling</li><li>10% discount on additional services</li></ul></div>
-<div class="card"><span class="badge">Premium care</span><h3>Property Plus</h3><div class="price">$349 / fortnight</div><ul><li>Weekly home cleaning</li><li>Fortnightly lawn mowing</li><li>Monthly garden maintenance</li><li>Seasonal fertiliser program</li><li>Lawn health inspections</li><li>Weed monitoring</li><li>Annual Property Health Check</li><li>Priority scheduling</li><li>10% off additional services</li></ul></div>
+<div class="card"><span class="badge">Weekly plan</span><h3>Home Essentials</h3><div class="price">$189/week</div><ul><li>Weekly home cleaning up to 2 hours</li><li><strong>Weekly lawn mowing</strong></li><li>Basic edging each visit</li><li>Mopping included</li><li>Priority scheduling</li><li>10% discount on additional services</li></ul></div>
+<div class="card"><span class="badge">Most popular</span><h3>Home Balance</h3><div class="price">$249/fortnight</div><ul><li>Weekly home cleaning up to 2 hours</li><li><strong>Fortnightly lawn mowing</strong></li><li>Monthly garden maintenance</li><li>Lawn health inspections</li><li>Weed monitoring</li><li>Mopping included</li><li>Priority scheduling</li><li>10% discount on additional services</li></ul></div>
+<div class="card"><span class="badge">Premium care</span><h3>Property Plus</h3><div class="price">$349/fortnight</div><ul><li>Weekly home cleaning</li><li>Fortnightly lawn mowing</li><li>Monthly garden maintenance</li><li>Seasonal fertiliser program</li><li>Lawn health inspections</li><li>Weed monitoring</li><li>Annual Property Health Check</li><li>Priority scheduling</li><li>10% off additional services</li></ul></div>
 </div>
 </section>
 
-<section>
-<h2 class="section-title">Lawn Mowing Cost Breakdown</h2>
-<table><tr><th>Service Type</th><th>Typical Includes</th><th>From</th></tr>
-<tr><td>Small Lawn</td><td>Mow, basic edge, blow-down of paths</td><td>$55</td></tr>
-<tr><td>Medium Lawn</td><td>Mow, edge, blow-down of paths and driveway</td><td>$70</td></tr>
-<tr><td>Large Lawn</td><td>Mow, edge, longer site time, larger green waste volume</td><td>$90</td></tr>
+<section class="section">
+<h2>Lawn Mowing Cost Breakdown</h2>
+<table><tr><th>Service</th><th>Typical Includes</th><th>From</th></tr>
+<tr><td>Small Lawn <span class="small">(up to approx. 200m²)</span></td><td>Mow, basic edging and blow-down</td><td>$55</td></tr>
+<tr><td>Medium Lawn <span class="small">(approx. 200–500m²)</span></td><td>Mow, edging, paths and driveway blow-down</td><td>$70</td></tr>
+<tr><td>Large Lawn <span class="small">(approx. 500–800m²)</span></td><td>Mow, edging, longer site time and extra clean-up</td><td>$90</td></tr>
+<tr><td>Extra Large / Acreage</td><td>Custom mowing plan based on size, access and growth</td><td>Quote</td></tr>
 <tr><td>Overgrown Lawn</td><td>Extra cutting time, staged cut if required</td><td>Quote</td></tr>
-<tr><td>Acreage / Large Property</td><td>Custom mowing plan based on size and access</td><td>Quote</td></tr>
-<tr><td>Whipper Snipping Only</td><td>Fence lines, edges, hard-to-reach grass</td><td>$35</td></tr>
-<tr><td>Green Waste Removal</td><td>Bagging and disposal of excess clippings or garden waste</td><td>From $20</td></tr></table>
+<tr><td>Whipper Snipping Only</td><td>Fence lines, edges and hard-to-reach areas</td><td>$35</td></tr>
+<tr><td>Green Waste Removal</td><td>Bagging and disposal of excess grass or garden waste</td><td>From $20</td></tr></table>
 </section>
 
-<section>
-<h2 class="section-title">Lawn Health & Garden Care Pricing</h2>
+<section class="section">
+<h2>Lawn Health & Garden Care</h2>
 <table><tr><th>Service</th><th>Typical Includes</th><th>From</th></tr>
-<tr><td>Lawn Fertilising</td><td>Seasonal fertiliser application suited to lawn condition</td><td>$65</td></tr>
+<tr><td>Lawn Fertilising</td><td>Seasonal fertiliser suited to lawn condition</td><td>$65</td></tr>
 <tr><td>Weed Control</td><td>Targeted lawn or garden weed treatment</td><td>$55</td></tr>
-<tr><td>Lawn Health Inspection</td><td>Visual check for weeds, dry spots, pests and general condition</td><td>$45</td></tr>
-<tr><td>Monthly Garden Maintenance</td><td>Light pruning, weeding, tidy-up and maintenance</td><td>From $80</td></tr>
-<tr><td>Garden Clean-Up</td><td>Heavier tidy-up, pruning, waste removal and reset</td><td>Quote</td></tr>
+<tr><td>Lawn Health Inspection</td><td>Check for weeds, dry spots, pests and general lawn condition</td><td>$45</td></tr>
+<tr><td>Monthly Garden Maintenance</td><td>Light pruning, weeding, tidy-up and general maintenance</td><td>From $80</td></tr>
+<tr><td>Garden Clean-Up</td><td>Heavier tidy-up, pruning, waste removal and garden reset</td><td>Quote</td></tr>
 <tr><td>Hedge Trimming</td><td>Shape, tidy and clean-up</td><td>Quote</td></tr>
 <tr><td>Mulching</td><td>Supply and install or install-only options</td><td>Quote</td></tr>
-<tr><td>Scarifying</td><td>Spring lawn renewal service for thatch removal</td><td>Quote</td></tr>
+<tr><td>Scarifying</td><td>Spring lawn renewal and thatch removal</td><td>Quote</td></tr>
 <tr><td>Core Aeration</td><td>Lawn decompaction and root zone improvement</td><td>Quote</td></tr>
 <tr><td>Lawn Renovation</td><td>Scarify, aerate, fertilise, top dress and recovery plan</td><td>Quote</td></tr>
 <tr><td>Irrigation & Reticulation Maintenance</td><td>Inspection, repairs, sprinkler checks and controller programming</td><td>Quote</td></tr></table>
 </section>
 
-<section>
-<h2 class="section-title">Cleaning Cost Breakdown</h2>
+<section class="section">
+<h2>Cleaning Cost Breakdown</h2>
 <p class="note">Cleaning is flexible and time-based. We use the booked time to focus on the customer’s priority areas rather than forcing every home into the same fixed checklist.</p>
-<table><tr><th>Cleaning Type</th><th>Best For</th><th>From</th></tr>
-<tr><td>Weekly Cleaning</td><td>Regular upkeep for busy households</td><td>$99</td></tr>
-<tr><td>Fortnightly Cleaning</td><td>Ongoing maintenance for smaller or tidy homes</td><td>$109</td></tr>
-<tr><td>Monthly Cleaning</td><td>Light maintenance or top-up clean</td><td>$129</td></tr>
-<tr><td>One-Off Clean</td><td>General reset or occasional clean</td><td>$149</td></tr>
-<tr><td>Deep Clean</td><td>Detailed clean requiring more time and attention</td><td>Quote</td></tr>
+<table><tr><th>Cleaning Type</th><th>Typical Time / Best For</th><th>From</th></tr>
+<tr><td>Weekly Cleaning</td><td>Up to 2 hours for regular upkeep</td><td>$99</td></tr>
+<tr><td>Fortnightly Cleaning</td><td>Up to 2 hours for ongoing maintenance</td><td>$109</td></tr>
+<tr><td>Monthly Cleaning</td><td>Up to 3 hours for a light reset or top-up clean</td><td>$129</td></tr>
+<tr><td>One-Off Clean</td><td>Custom priority clean</td><td>$149</td></tr>
+<tr><td>Deep Clean</td><td>Detailed clean requiring extra time and attention</td><td>Quote</td></tr>
 <tr><td>End of Lease Clean</td><td>Vacate and rental handover cleaning</td><td>Quote</td></tr>
 <tr><td>Airbnb Turnover Clean</td><td>Guest changeover, presentation and reset</td><td>Quote</td></tr></table>
 </section>
 
-<section>
-<h2 class="section-title">Flexible Cleaning Tasks</h2>
-<div class="split">
-<div class="card"><h3>What can be prioritised?</h3><ul><li>Bathrooms and toilets</li><li>Kitchen benches, sinks and stovetops</li><li>Vacuuming and mopping</li><li>Dusting and surface cleaning</li><li>Bedrooms and bed making</li><li>General tidying</li><li>Internal glass and mirrors</li><li>Laundry folding</li><li>Cobweb removal</li><li>Spot cleaning</li></ul></div>
-<div class="card"><h3>Example time allocation</h3><table><tr><th>Booked Time</th><th>Suitable For</th></tr><tr><td>2 hours</td><td>Priority areas in a smaller home</td></tr><tr><td>3 hours</td><td>More detailed regular clean</td></tr><tr><td>4+ hours</td><td>Larger homes or deeper cleaning</td></tr></table><p class="small">Actual time required depends on home size, condition, number of bathrooms, pets, clutter, access and customer priorities.</p></div>
-</div>
+<section class="section split">
+<div class="card"><h2>Flexible Cleaning</h2><p>Every visit is tailored to what matters most to the customer. One week may focus on bathrooms and floors. The next may focus on kitchen, bedrooms, dusting or general tidying.</p><ul><li>Bathrooms and toilets</li><li>Kitchens and stovetops</li><li>Vacuuming and mopping</li><li>Dusting and surfaces</li><li>Bedrooms and bed making</li><li>Internal glass and mirrors</li><li>Laundry folding</li><li>Cobweb removal</li><li>Spot cleaning</li></ul></div>
+<div class="value-box"><h2>Package Value</h2><p><strong>Why packages work:</strong> customers get regular scheduled service, better consistency, priority booking and discounted add-ons instead of constantly booking separate jobs.</p><ul><li>Predictable weekly or fortnightly cost</li><li>One company for home and yard</li><li>Better ongoing property presentation</li><li>Priority scheduling</li><li>10% off additional services</li></ul></div>
 </section>
 
-<section>
-<h2 class="section-title">Exterior Property Care Pricing</h2>
+<section class="section">
+<h2>Exterior Property Care</h2>
 <table><tr><th>Service</th><th>Typical Includes</th><th>From</th></tr>
 <tr><td>Pressure Washing</td><td>Driveways, paths, paved areas and exterior surfaces</td><td>Quote</td></tr>
 <tr><td>Window Cleaning</td><td>External or internal/external options</td><td>Quote</td></tr>
@@ -130,23 +134,24 @@ td:last-child,th:last-child{text-align:right;font-weight:800}
 <tr><td>Property Health Check</td><td>Visual property condition check and maintenance notes</td><td>Quote</td></tr></table>
 </section>
 
-<section>
-<h2 class="section-title">Optional Add-Ons</h2>
+<section class="section">
+<h2>Optional Add-Ons</h2>
 <div class="grid">
-<div class="card"><h3>Home Care Add-Ons</h3><ul><li>Oven cleaning</li><li>Fridge cleaning</li><li>Internal window cleaning</li><li>Garage tidy</li><li>Pantry organisation</li></ul></div>
-<div class="card"><h3>Lawn & Garden Add-Ons</h3><ul><li>Weed spraying</li><li>Fertilising</li><li>Mulching</li><li>Planting</li><li>Garden restoration</li><li>Green waste removal</li></ul></div>
-<div class="card"><h3>Exterior Add-Ons</h3><ul><li>Pressure washing</li><li>Window cleaning</li><li>Gutter cleaning</li><li>Property Health Check</li></ul></div>
+<div class="card"><h3>Home Care</h3><ul><li>Oven cleaning</li><li>Fridge cleaning</li><li>Internal window cleaning</li><li>Garage tidy</li><li>Pantry organisation</li></ul></div>
+<div class="card"><h3>Lawn & Garden</h3><ul><li>Weed spraying</li><li>Fertilising</li><li>Mulching</li><li>Planting</li><li>Garden restoration</li><li>Green waste removal</li></ul></div>
+<div class="card"><h3>Exterior</h3><ul><li>Pressure washing</li><li>Window cleaning</li><li>Gutter cleaning</li><li>Property Health Check</li></ul></div>
 </div>
 </section>
 
-<section>
-<h2 class="section-title">Pricing Notes</h2>
+<section class="section">
+<h2>Pricing Notes</h2>
 <div class="card"><ul><li>All prices are starting prices and may change after inspection or quote.</li><li>Final price depends on property size, lawn height, cleaning condition, access, travel distance, green waste volume and service frequency.</li><li>Overgrown lawns, heavily soiled homes and large garden clean-ups may require a custom quote.</li><li>Regular clients may receive better value through membership packages.</li></ul></div>
 </section>
 
 <div class="cta"><h2>Need an Exact Price?</h2><p>Send us your details and we’ll provide a clear quote for your property.</p><a class="btn" href="quote.html">Request a Free Quote</a></div>
 </main>
 
-<footer class="footer"><p><strong>Complete Property Care SA</strong></p><p>Cleaning • Lawn Care • Garden Care • Exterior Property Care</p></footer>
+<div class="lawn-strip" aria-hidden="true"></div>
+<footer><p><strong>Complete Property Care SA</strong></p><p>Cleaning • Lawn Care • Garden Care • Exterior Property Care</p></footer>
 </body>
 </html>
