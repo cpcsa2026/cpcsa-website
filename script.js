@@ -1,1 +1,2 @@
-console.log('CPCSA Website v1');
+const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('.nav');if(toggle&&nav){toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open)});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false')}))}
+const params=new URLSearchParams(location.search);const packageField=document.querySelector('#package');if(packageField&&params.get('package'))packageField.value=params.get('package');
